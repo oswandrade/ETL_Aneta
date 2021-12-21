@@ -1,0 +1,2118 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/5/2021 3:48:23 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="DESKTOP-P3AHK5A"
+  DTS:CreatorName="DESKTOP-P3AHK5A\Backup"
+  DTS:DTSID="{9C528413-F588-4328-92D6-FF0A6AFEA869}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LocaleID="12298"
+  DTS:ObjectName="CashDecimoTercero"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{1A7C9E41-EC5B-4558-8254-9C345C46961D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Archivo CASH 13]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Archivos para Cash Management"
+      DTS:DTSID="{510812AB-97BC-45BC-91FD-8158F3A244AD}"
+      DTS:ObjectName="Archivo CASH 13">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::PathCompleto]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="12298"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoTrx"
+              DTS:DTSID="{26A1A97E-A839-4464-A689-E8E5EA022FAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Secuencial"
+              DTS:DTSID="{F4165FF4-EE7D-452B-AB02-73E08463F2A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Moneda"
+              DTS:DTSID="{397D0394-852E-41EF-9310-078BB3935BC8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="131"
+              DTS:DataPrecision="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Valor"
+              DTS:DTSID="{97EB2EA1-DEC0-42DE-91F7-D545DB6B7D1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoPago"
+              DTS:DTSID="{C8906EBB-E85E-4987-A007-C696087C3A09}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoCuenta"
+              DTS:DTSID="{8EF658C3-E5B1-4BDE-82B9-748503C4D594}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumeroCuenta"
+              DTS:DTSID="{9398ABB9-C845-4AE5-A4AF-7C6AF11B127E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="64"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Concepto"
+              DTS:DTSID="{56A9E6F1-86C2-46C0-90D2-715EF3D2A4E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoIdent"
+              DTS:DTSID="{FFF8E634-BC1E-4E3C-9E44-1B3A5F270CA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Identificacion"
+              DTS:DTSID="{85F6BE3C-02F8-43DB-91B0-434753406E82}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombre"
+              DTS:DTSID="{AF7CF8D9-9E9B-4353-8DE1-18AC2A1980CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CodigoBanco"
+              DTS:DTSID="{5AA4F2CD-4EFA-46BA-93C8-7682ABDFACF6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AWA_ACCOUNTING]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{70608D7C-1612-4D77-AA33-9F9BB4BECF01}"
+      DTS:ObjectName="AWA_ACCOUNTING">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=ANUIOSRVBDD1\ANETA;User ID=sa;Initial Catalog=AWA_ACCOUNTING;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="kr6KVImBuQ=="
+            IV="JGPD4f6u4PQ=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
+            <CipherData>
+              <CipherValue>JGPD4f6u4PSMl2g6qFT55xOB+e1JEyNd1oqHJvwG2W4QOFGkbTeuBF7aLjyIznZvFTzgE0B3Vj90nmgIGwjjA0SPKmpnul4mKoXbpEQgO59tQM+ehUcUxW5MAXz7J5KdEFIBvmf8pFF3IZiVvq/t9Laptu0qO+EzsF7a3mZ9Wlc=</CipherValue>
+            </CipherData>
+          </EncryptedData>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9E46073F-D179-45A0-AD12-C7F8FB139D89}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Anio">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{114C3A83-A8A3-4450-9813-1C6FB0224B7F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Archivo">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D671F6E8-6A23-4C78-BDCB-47176DC46168}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ArchivoCash">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{25566DF6-ABBA-4747-BFC0-905A3CEAD6C6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CarpetaGenerados">
+      <DTS:VariableValue
+        DTS:DataType="8">Generados\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D844BB56-9B48-4269-865E-E823E914DDA7}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Fecha">
+      <DTS:VariableValue
+        DTS:DataType="7">8/5/2021 4:16:00 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BFC25494-2B97-4743-A66E-EC8B71EBCEFB}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FechaDecimo">
+      <DTS:VariableValue
+        DTS:DataType="7">8/5/2021 4:16:49 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{701765C5-93D6-47F6-A4F6-61B402CE1ED7}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FechaPeriodo">
+      <DTS:VariableValue
+        DTS:DataType="7">8/5/2021 4:16:13 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E78BE0B2-7B10-444A-93CF-4A0FD01ECD40}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FlagEjecucion">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{07BDF65A-ABD5-464B-86D5-2730AC7F7E44}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Mes">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{367801C5-02FC-4426-9CDB-50E19460FFFE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PathCompleto">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EA848CE2-84F6-44E7-B963-92DF6B2BD6BA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PathGenerados">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E6E371FA-E3A9-48D5-817F-2DF3C0F5ADD2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Ruta">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A9CDE482-3D36-4C76-9DBB-DBEFAD1EEF54}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Servidor">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Actualizar Marca Cash"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{860ABCC1-160C-4962-8732-2B5D9D0D955F}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Actualizar Marca Cash"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1477EBB6-3190-42EB-B78E-A33A96B9AA3B}"
+          SQLTask:SqlStatementSource="update PAGO_DECIMOS&#xA;set Cash = 1&#xA;where Anio = ? and Periodo = ? and Tipo = 13" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::Anio"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::Mes"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Archivo cash de salida"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Tarea Script"
+      DTS:DTSID="{46A06134-746E-4255-86C3-6C22BDFBBDCA}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask, Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Archivo cash de salida"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_62bbf0612d9742258411810282d7cc81"
+          VSTAMajorVersion="3"
+          VSTAMinorVersion="0"
+          Language="CSharp"
+          ReadOnlyVariables="User::Anio,User::Archivo,User::CarpetaGenerados,User::Mes,User::Ruta,User::Servidor"
+          ReadWriteVariables="User::ArchivoCash,User::PathCompleto,User::PathGenerados">
+          <ProjectItem
+            Name="Properties\Resources.resx"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_62bbf0612d9742258411810282d7cc81.Properties.Settings.get_Default():ST_62bbf0612d9742258411810282d7cc81.Properties.Sett" +
+    "ings")]
+
+namespace ST_62bbf0612d9742258411810282d7cc81.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="ST_62bbf0612d9742258411810282d7cc81.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{117ba1a0-3d29-4a27-a0b8-4face603bebb}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_62bbf0612d9742258411810282d7cc81</RootNamespace>
+    <AssemblyName>ST_62bbf0612d9742258411810282d7cc81</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=11.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST110</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+          <ProjectItem
+            Name="ScriptMain.cs"
+            Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
+/* The Script Task allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services control flow. 
+ * 
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script task. */
+#endregion
+
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Windows.Forms;
+using System.IO;
+#endregion
+
+namespace ST_62bbf0612d9742258411810282d7cc81
+{
+    /// <summary>
+    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+    /// or parent of this class.
+    /// </summary>
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+	public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+	{
+        #region Help:  Using Integration Services variables and parameters in a script
+        /* To use a variable in this script, first ensure that the variable has been added to 
+         * either the list contained in the ReadOnlyVariables property or the list contained in 
+         * the ReadWriteVariables property of this script task, according to whether or not your
+         * code needs to write to the variable.  To add the variable, save this script, close this instance of
+         * Visual Studio, and update the ReadOnlyVariables and 
+         * ReadWriteVariables properties in the Script Transformation Editor window.
+         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+         * 
+         * Example of reading from a variable:
+         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+         * 
+         * Example of writing to a variable:
+         *  Dts.Variables["User::myStringVariable"].Value = "new value";
+         * 
+         * Example of reading from a package parameter:
+         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+         *  
+         * Example of reading from a project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+         * 
+         * Example of reading from a sensitive project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+         * */
+
+        #endregion
+
+        #region Help:  Firing Integration Services events from a script
+        /* This script task can fire events for logging purposes.
+         * 
+         * Example of firing an error event:
+         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+         * 
+         * Example of firing an information event:
+         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+         * 
+         * Example of firing a warning event:
+         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+         * */
+        #endregion
+
+        #region Help:  Using Integration Services connection managers in a script
+        /* Some types of connection managers can be used in this script task.  See the topic 
+         * "Working with Connection Managers Programatically" for details.
+         * 
+         * Example of using an ADO.Net connection manager:
+         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+         *
+         * Example of using a File connection manager
+         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+         *  string filePath = (string)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+         * */
+        #endregion
+
+
+        #region ScriptResults declaration
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+        /// <summary>
+        /// This method is called when this script task executes in the control flow.
+        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+        /// To open Help, press F1.
+        /// </summary>
+        public void Main()
+        {
+            try
+            {
+                string pathGenerados =
+                    "\\\\" +
+                    Dts.Variables["Servidor"].Value.ToString() +
+                    Dts.Variables["Ruta"].Value.ToString() +
+                    Dts.Variables["CarpetaGenerados"].Value.ToString();
+
+                string archivoSalida =
+                      Dts.Variables["Archivo"].Value.ToString()
+                    + Dts.Variables["Anio"].Value.ToString()
+                    + Dts.Variables["Mes"].Value.ToString()
+                    + ".txt";
+
+                msgPersonalizado(1, "I==>> pathGenerados: " + pathGenerados);
+                msgPersonalizado(1, "I==>> archivoSalida: " + archivoSalida);
+                msgPersonalizado(1, "I==>> pathCompleto: " + pathGenerados + archivoSalida);
+
+                Dts.Variables["PathGenerados"].Value = pathGenerados;
+                Dts.Variables["ArchivoCash"].Value = archivoSalida;
+                Dts.Variables["PathCompleto"].Value = pathGenerados + archivoSalida;
+                Dts.TaskResult = (int)ScriptResults.Success;
+            }
+            catch (IOException ioex)
+            {
+                msgPersonalizado(4, "E==>> Error en la generacion del nombre del archivo. " + ioex.Message);
+                Dts.TaskResult = (int)ScriptResults.Failure;
+            }
+            catch (Exception ex)
+            {
+                msgPersonalizado(4, "E==>> Error en la generacion del nombre del archivo. " + ex.Message);
+                Dts.TaskResult = (int)ScriptResults.Failure;
+            }
+        }
+
+        /// <summary>
+        /// mensajes
+        /// </summary>
+        /// <param name="intCodigoAccion">1:info - 2:warning - 3:error - 4:excepcion error  </param>
+        /// <param name="strMensage">mensaje mostrar</param>
+        private void msgPersonalizado(int intCodigoAccion, string strMensage)
+        {
+            bool fireAgain;
+            fireAgain = true;
+            switch (intCodigoAccion)
+            {
+                case 1://informacion
+                    Dts.Events.FireInformation(3, "INFO PROCESO", strMensage.ToUpper(), "", 0, ref fireAgain);
+                    break;
+
+                case 2: //advertencia
+                    Dts.Events.FireWarning(14, "WARNING PROCESO", strMensage.ToUpper(), "", 0);
+                    break;
+
+                case 3:// error
+                    Dts.Events.FireError(18, "ERROR PROCESO", strMensage.ToUpper(), "", 0);
+                    break;
+
+                case 4:// error exception
+                    Dts.Events.FireError(18, "EXCEPCION PROCESO", strMensage.ToUpper(), "", 0);
+                    break;
+
+                default: //advertencia
+                    Dts.Events.FireWarning(14, "WARNING (2)", strMensage.ToUpper(), "", 0);
+                    break;
+            }
+        }
+	}
+}]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:CodeName>ST_62bbf0612d9742258411810282d7cc81</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
+		<msb:DisplayName>ST_62bbf0612d9742258411810282d7cc81</msb:DisplayName>
+		<msb:ProjectId>{01EE60C2-4586-4203-AAD0-F49D3353B6A6}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ST_62bbf0612d9742258411810282d7cc81.csproj"/>
+		<msb:File Include="Properties\Settings.settings"/>
+		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Resources.resx"/>
+		<msb:File Include="Properties\Resources.Designer.cs"/>
+		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="ScriptMain.cs"/>
+	</msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_62bbf0612d9742258411810282d7cc81")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_62bbf0612d9742258411810282d7cc81")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_62bbf0612d9742258411810282d7cc81.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_62bbf0612d9742258411810282d7cc81.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_62bbf0612d9742258411810282d7cc81.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace ST_62bbf0612d9742258411810282d7cc81.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_62bbf0612d9742258411810282d7cc81.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <BinaryItem
+            Name="ST_62bbf0612d9742258411810282d7cc81.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAM4HKWEAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAsjMA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAGAzAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAuBMAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACU
+MwAAAAAAAEgAAAACAAUAlCMAABQPAAABAAAAAAAAAKgyAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABswBQC5AQAAAQAAEXIBAABwAigQAAAKbxEAAApyBwAAcG8S
+AAAKbxMAAApvFAAACgIoEAAACm8RAAAKchkAAHBvEgAACm8TAAAKbxQAAAoCKBAAAApvEQAACnIj
+AABwbxIAAApvEwAACm8UAAAKKBUAAAoKAigQAAAKbxEAAApyRQAAcG8SAAAKbxMAAApvFAAACgIo
+EAAACm8RAAAKclUAAHBvEgAACm8TAAAKbxQAAAoCKBAAAApvEQAACnJfAABwbxIAAApvEwAACm8U
+AAAKcmcAAHAoFQAACgsCF3JxAABwBigWAAAKKAIAAAYCF3KdAABwBygWAAAKKAIAAAYCF3LJAABw
+BgcoFwAACigCAAAGAigQAAAKbxEAAApy8wAAcG8SAAAKBm8YAAAKAigQAAAKbxEAAApyDwEAcG8S
+AAAKB28YAAAKAigQAAAKbxEAAApyJwEAcG8SAAAKBgcoFgAACm8YAAAKAigQAAAKFm8ZAAAK3kwM
+AhpyQQEAcAhvGgAACigWAAAKKAIAAAYCKBAAAAoXbxkAAAreJg0CGnJBAQBwCW8aAAAKKBYAAAoo
+AgAABgIoEAAAChdvGQAACt4AKgAAAEE0AAAAAAAAAAAAAGwBAABsAQAAJgAAAA8AAAEAAAAAAAAA
+AGwBAACSAQAAJgAAABAAAAETMAcA1gAAAAIAABEXCgMXWUUEAAAABQAAACoAAABOAAAAcwAAADiT
+AAAAAigQAAAKbxsAAAoZcq0BAHAEbxwAAApyxwEAcBYSAG8dAAAKKgIoEAAACm8bAAAKHw5yyQEA
+cARvHAAACnLHAQBwFm8eAAAKKgIoEAAACm8bAAAKHxJy6QEAcARvHAAACnLHAQBwFm8fAAAKJioC
+KBAAAApvGwAACh8ScgUCAHAEbxwAAApyxwEAcBZvHwAACiYqAigQAAAKbxsAAAofDnIpAgBwBG8c
+AAAKcscBAHAWbx4AAAoqHgIoIAAACioeAighAAAKKq5+AQAABC0eckECAHDQAwAAAigiAAAKbyMA
+AApzJAAACoABAAAEfgEAAAQqGn4CAAAEKh4CgAIAAAQqGn4DAAAEKh4CKCUAAAoqLnMJAAAGgAMA
+AAQqQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAALAQAACN+AACYBAAACAYAACNT
+dHJpbmdzAAAAAKAKAAC0AgAAI1VTAFQNAAAQAAAAI0dVSUQAAABkDQAAsAEAACNCbG9iAAAAAAAA
+AAIAAAFXHaIBCQMAAAD6ATMAFgAAAQAAACEAAAAFAAAABgAAAAoAAAADAAAAJQAAAAIAAAAQAAAA
+AgAAAAIAAAADAAAABAAAAAEAAAAEAAAAAQAAAAEAAAAAAKwDAQAAAAAABgBGAt8EBgDVAt8EBgCS
+AcwEDwBTBQAABgC/AUoEBgApAkoEBgAKAkoEBgC8AkoEBgBmAkoEBgB/AkoEBgDWAUoEBgDxAQ0D
+CgCaAlsDCgARAVsDBgBcBC4ABgBeBN0DBgDkA90DBgB1AcwEBgDYBd0DBgCJBP8EBgB5BDUEDgBF
+AZYDDgCmAZYDDgAtASAEBgBaAd8ECgCEA1sDEgCVBbwAEgCPALwABgA1A90DCgChBFsDBgDcAN0D
+BgCYAN0DBgD+BUoEAAAAACUAAAAAAAEAAQABABAA9QMBADkAAQABAAAAEAAGBWIFTQABAAQAAAEQ
+AJ8FYgVhAAMACAADAQAAuAUAAEUABAALABEA6QOuABEAAQGyABEAaAC2AAYGVwC6AFaAqAW9AFaA
+4QC9AFAgAAAAAIYA+wMGAAEATCIAAAAAgQBoBMEAAQAuIwAAAACGGL8EBgADADYjAAAAAIMYvwQG
+AAMAPiMAAAAAkwiFBMcAAwBqIwAAAACTCOkAzAADAHEjAAAAAJMI9QDRAAMAeSMAAAAAlgjfBdcA
+BACAIwAAAACGGL8EBgAEAIgjAAAAAJEYxQTcAAQAAAABAAAEAAACAHgAAAABAAcDCQC/BAEAEQC/
+BAYAGQC/BAoAKQC/BBAAMQC/BBAAOQC/BBAAQQC/BBAASQC/BBAAUQC/BBAAWQC/BBAAYQC/BBAA
+aQC/BAYAkQC/BAYAuQC/BBUAyQC/BAYAcQCwBSQA0QCRBSkA2QDUAy4A4QDzAjQAmQAzAzgA6QDR
+BTwA6QDRBUQA6QDRBUoA4QD9AlEA0QDrBQEAgQCDADgA0QDGBVoA6QCZBDgA8QAQBF8A8QAnA2oA
+8QC1BHMAcQC/BAYAmQC/BAYA+QCqAHwA+QD6BYQAoQC/BIoAwQC/BAYACAAUAKQACAAYAKkAKQBz
+ABcBLgALAO8ALgATAPgALgAbABcBLgAjACABLgArAEkBLgAzAEkBLgA7AEkBLgBDACABLgBLAE8B
+LgBTAEkBLgBbAGYBQwBjAKkASQBzABcBYQB7AKkAYwBrAKkAGwBWAAMAAQAEAAMAAACJBOAAAAAJ
+AeUAAADjBeoAAgAFAAMAAgAGAAUAAQAHAAUAAgAIAAcABIAAAAEAAADlHj5LAAAAAAAAAQAAAAQA
+AAAAAAAAAAAAAJIAXwAAAAAACwAAAAAAAAAAAAAAmwA8AwAAAAAEAAAAAAAAAAAAAACSAN0DAAAA
+AAsAAAAAAAAAAAAAAJsAOAAAAAAAAAAAAAEAAAAQBQAABQACAAAAAFNUXzYyYmJmMDYxMmQ5NzQy
+MjU4NDExODEwMjgyZDdjYzgxADxNb2R1bGU+AFN5c3RlbS5JTwBNaWNyb3NvZnQuU3FsU2VydmVy
+Lk1hbmFnZWREVFMAdmFsdWVfXwBtc2NvcmxpYgBkZWZhdWx0SW5zdGFuY2UAc3RyTWVuc2FnZQBn
+ZXRfTWVzc2FnZQBWYXJpYWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBN
+aWNyb3NvZnQuU3FsU2VydmVyLkR0cy5SdW50aW1lAFR5cGUARmFpbHVyZQBnZXRfQ3VsdHVyZQBz
+ZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAVlNUQVJUU2NyaXB0T2JqZWN0TW9kZWxCYXNlAEFw
+cGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJh
+dGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJp
+YnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3Nl
+bWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlD
+b25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGls
+YXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1i
+bHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRyeVBvaW50QXR0cmlidXRlAEFz
+c2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBnZXRf
+VmFsdWUAc2V0X1ZhbHVlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcARmlyZVdhcm5p
+bmcAVG9TdHJpbmcATWljcm9zb2Z0LlNxbFNlcnZlci5TY3JpcHRUYXNrAE1pY3Jvc29mdC5TcWxT
+ZXJ2ZXIuRHRzLlRhc2tzLlNjcmlwdFRhc2sAU2NyaXB0T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBv
+bmVudE1vZGVsAFNUXzYyYmJmMDYxMmQ5NzQyMjU4NDExODEwMjgyZDdjYzgxLmRsbABnZXRfSXRl
+bQBTeXN0ZW0ARW51bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAGludENvZGlnb0FjY2lvbgBGaXJl
+SW5mb3JtYXRpb24AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lz
+dGVtLlJlZmxlY3Rpb24ASU9FeGNlcHRpb24AbXNnUGVyc29uYWxpemFkbwBDdWx0dXJlSW5mbwBn
+ZXRfUmVzb3VyY2VNYW5hZ2VyAFRvVXBwZXIARXZlbnRzT2JqZWN0V3JhcHBlcgBGaXJlRXJyb3IA
+LmN0b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNl
+cnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU1RfNjJiYmYwNjEyZDk3NDIyNTg0MTE4MTAyODJkN2Nj
+ODEuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNUXzYyYmJm
+MDYxMmQ5NzQyMjU4NDExODEwMjgyZDdjYzgxLlByb3BlcnRpZXMAZ2V0X1ZhcmlhYmxlcwBTZXR0
+aW5ncwBTdWNjZXNzAGdldF9EdHMAU2NyaXB0UmVzdWx0cwBnZXRfRXZlbnRzAENvbmNhdABPYmpl
+Y3QAZ2V0X0RlZmF1bHQAc2V0X1Rhc2tSZXN1bHQAZ2V0X0Fzc2VtYmx5AAAABVwAXAAAEVMAZQBy
+AHYAaQBkAG8AcgAACVIAdQB0AGEAACFDAGEAcgBwAGUAdABhAEcAZQBuAGUAcgBhAGQAbwBzAAAP
+QQByAGMAaABpAHYAbwAACUEAbgBpAG8AAAdNAGUAcwAACS4AdAB4AHQAACtJAD0APQA+AD4AIABw
+AGEAdABoAEcAZQBuAGUAcgBhAGQAbwBzADoAIAAAK0kAPQA9AD4APgAgAGEAcgBjAGgAaQB2AG8A
+UwBhAGwAaQBkAGEAOgAgAAApSQA9AD0APgA+ACAAcABhAHQAaABDAG8AbQBwAGwAZQB0AG8AOgAg
+AAAbUABhAHQAaABHAGUAbgBlAHIAYQBkAG8AcwAAF0EAcgBjAGgAaQB2AG8AQwBhAHMAaAAAGVAA
+YQB0AGgAQwBvAG0AcABsAGUAdABvAABrRQA9AD0APgA+ACAARQByAHIAbwByACAAZQBuACAAbABh
+ACAAZwBlAG4AZQByAGEAYwBpAG8AbgAgAGQAZQBsACAAbgBvAG0AYgByAGUAIABkAGUAbAAgAGEA
+cgBjAGgAaQB2AG8ALgAgAAAZSQBOAEYATwAgAFAAUgBPAEMARQBTAE8AAAEAH1cAQQBSAE4ASQBO
+AEcAIABQAFIATwBDAEUAUwBPAAAbRQBSAFIATwBSACAAUABSAE8AQwBFAFMATwAAI0UAWABDAEUA
+UABDAEkATwBOACAAUABSAE8AQwBFAFMATwAAF1cAQQBSAE4ASQBOAEcAIAAoADIAKQAAcVMAVABf
+ADYAMgBiAGIAZgAwADYAMQAyAGQAOQA3ADQAMgAyADUAOAA0ADEAMQA4ADEAMAAyADgAMgBkADcA
+YwBjADgAMQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAPu9pWCM
+xadDrzYP9YdnI70ABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkIBwQODhI9EkEEIAASaQQgABJt
+BSABEnEcAyAAHAMgAA4HAAQODg4ODgUAAg4ODgYAAw4ODg4EIAEBHAMHAQIEIAASeQogBgEIDg4O
+CBACCCAFAQgODg4ICCAFAggODg4IBwABEn0RgIEFIAASgIUHIAIBDhKAhQi3elxWGTTgiQiJhF3N
+gIDMkQQAAAAABAEAAAADBhJRAwYSVQMGEhACBggDBhEUBSACAQgOBAAAElEEAAASVQUAAQESVQQA
+ABIQAwAAAQQIABJRBAgAElUECAASEAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRo
+cm93cwEIAQACAAAAAAAoAQAjU1RfNjJiYmYwNjEyZDk3NDIyNTg0MTE4MTAyODJkN2NjODEAAAUB
+AAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAARwEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC4w
+AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRAuTkVUIEZyYW1ld29yayA0AAC0AAAAzsrvvgEAAACR
+AAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQu
+MC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNT
+eXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA
+iDMAAAAAAAAAAAAAojMAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJQzAAAAAAAAAAAAAAAAX0Nv
+ckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAAAaBAAAAAAAAAAAAAAaBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAPkvlHgAAAQA+S+UePwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAEegMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAVgMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAFQAXwA2ADIAYgBiAGYAMAA2ADEAMgBkADkANwA0ADIAMgA1ADgANAAxADEAOAAxADAAMgA4
+ADIAZAA3AGMAYwA4ADEAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+NwA5ADAAOQAuADEAOQAyADYAMgAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABT
+AFQAXwA2ADIAYgBiAGYAMAA2ADEAMgBkADkANwA0ADIAMgA1ADgANAAxADEAOAAxADAAMgA4ADIA
+ZAA3AGMAYwA4ADEALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAA
+AEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIAMQAAACoAAQABAEwAZQBnAGEAbABUAHIA
+YQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUAbgBh
+AG0AZQAAAFMAVABfADYAMgBiAGIAZgAwADYAMQAyAGQAOQA3ADQAMgAyADUAOAA0ADEAMQA4ADEA
+MAAyADgAMgBkADcAYwBjADgAMQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBl
+AAAAAABTAFQAXwA2ADIAYgBiAGYAMAA2ADEAMgBkADkANwA0ADIAMgA1ADgANAAxADEAOAAxADAA
+MgA4ADIAZAA3AGMAYwA4ADEAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAx
+AC4AMAAuADcAOQAwADkALgAxADkAMgA2ADIAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAgAFYA
+ZQByAHMAaQBvAG4AAAAxAC4AMAAuADcAOQAwADkALgAxADkAMgA2ADIAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAtDMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+        </ScriptProject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Generar Archivo Cash"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{0104109B-94EB-4E41-9C0B-E862DDE38F50}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Generar Archivo Cash"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Generar Archivo Cash\Búsqueda"
+              componentClassID="DTSTransform.Lookup.3"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select id IdBanco, Codigo_Banco
+from AWA_BANCO</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select id IdBanco, Codigo_Banco
+from AWA_BANCO) [refTable]
+where [refTable].[IdBanco] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IdBanco" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Codigo_Banco" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[IdBanco]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Generar Archivo Cash\Búsqueda.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AWA_ACCOUNTING]"
+                  connectionManagerRefId="Package.ConnectionManagers[AWA_ACCOUNTING]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Generar Archivo Cash\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Búsqueda.Inputs[Entrada de búsqueda].Columns[IdBanco]"
+                      cachedDataType="i4"
+                      cachedName="IdBanco"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[IdBanco]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">IdBanco</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Generar Archivo Cash\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[Codigo_Banco]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copiar columna"
+                      length="4"
+                      lineageId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[Codigo_Banco]"
+                      name="Codigo_Banco"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">Codigo_Banco</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Generar Archivo Cash\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Generar Archivo Cash\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS"
+              componentClassID="DTSAdapter.OLEDBSource.3"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Datos PAGOS_DECIMOS"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select 'PA' TIPOTRX, row_Number() over(order by (col.PRIMER_APELLIDO + ' ' + col.SEGUNDO_APELLIDO + ' ' + col.NOMBRE)) SECUENCIAL, 'USD' MONEDA, 
+floor(dmo.VALORACREDITAR * 100) as VALOR, 'CTA' TIPOPAGO, case when cta.AHORRO = 1 then 'AHO' else 'CTE' end TIPOCUENTA,  
+isnull(cta.NUMERO, SPACE(0)) NUMEROCUENTA, substring(right('00' + convert(varchar, dmo.PERIODO ), 2) +' ' + convert(varchar, dmo.ANIO) +  ' PAGO 13° ANETA' , 1, 64) CONCEPTO, 
+case when len(col.Identificacion) = 10 then 'C' else 'P' end TIPOIDENT,
+case when cta.Terceros = 0 then col.Identificacion else cta.IDENTIFICACION_TERCERO end IDENTIFICACION, 
+substring((trim(col.PRIMER_APELLIDO) + ' ' + trim(col.SEGUNDO_APELLIDO) + ' ' + trim(col.NOMBRE)), 1, 64) NOMBRE, 
+isnull(cta.Id_Banco, 0) IdBanco
+from PAGO_DECIMOS dmo
+inner join COLABORADOR col on (dmo.IDCOLABORADOR = col.ID)
+left join CUENTA_BANCARIA_COLABORADOR cta on (col.ID = cta.ID_COLABORADOR and cta.ACTIVO = 1)
+where ANIO = ? and PERIODO = ? and TIPO = 13
+and dmo.VALORACREDITAR &gt; 0
+order by (col.PRIMER_APELLIDO + ' ' + col.SEGUNDO_APELLIDO + ' ' + col.NOMBRE)</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping">"Parámetro0:Input",{9E46073F-D179-45A0-AD12-C7F8FB139D89};"Parámetro1:Input",{07BDF65A-ABD5-464B-86D5-2730AC7F7E44};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Connections[OleDbConnection]"
+                  connectionManagerID="{1477EBB6-3190-42EB-B78E-A33A96B9AA3B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AWP_PAYROLL]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOTRX]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPOTRX]"
+                      length="2"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOTRX]"
+                      name="TIPOTRX"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[SECUENCIAL]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[SECUENCIAL]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[SECUENCIAL]"
+                      name="SECUENCIAL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[MONEDA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[MONEDA]"
+                      length="3"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[MONEDA]"
+                      name="MONEDA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[VALOR]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[VALOR]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[VALOR]"
+                      name="VALOR"
+                      precision="14"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOCUENTA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPOCUENTA]"
+                      length="4"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOCUENTA]"
+                      name="TIPOCUENTA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[NUMEROCUENTA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[NUMEROCUENTA]"
+                      length="20"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[NUMEROCUENTA]"
+                      name="NUMEROCUENTA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[CONCEPTO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[CONCEPTO]"
+                      length="64"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[CONCEPTO]"
+                      name="CONCEPTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOIDENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPOIDENT]"
+                      length="1"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOIDENT]"
+                      name="TIPOIDENT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[IDENTIFICACION]"
+                      length="16"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]"
+                      name="IDENTIFICACION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[NOMBRE]"
+                      length="128"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[NOMBRE]"
+                      name="NOMBRE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOPAGO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPOPAGO]"
+                      length="3"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOPAGO]"
+                      name="TIPOPAGO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[IdBanco]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[IdBanco]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[IdBanco]"
+                      name="IdBanco"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPOTRX]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="TIPOTRX" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[SECUENCIAL]"
+                      dataType="i8"
+                      name="SECUENCIAL" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[MONEDA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="MONEDA" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[VALOR]"
+                      dataType="numeric"
+                      name="VALOR"
+                      precision="14" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPOCUENTA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="TIPOCUENTA" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[NUMEROCUENTA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="NUMEROCUENTA" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[CONCEPTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="48"
+                      name="CONCEPTO" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPOIDENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="TIPOIDENT" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[IDENTIFICACION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="IDENTIFICACION" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="64"
+                      name="NOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPOPAGO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="TIPOPAGO" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].ExternalColumns[IdBanco]"
+                      dataType="i4"
+                      name="IdBanco" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPOTRX]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPOTRX]"
+                      name="TIPOTRX" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[SECUENCIAL]"
+                      dataType="i8"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[SECUENCIAL]"
+                      name="SECUENCIAL" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[MONEDA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[MONEDA]"
+                      name="MONEDA" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[VALOR]"
+                      dataType="numeric"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[VALOR]"
+                      name="VALOR"
+                      precision="14" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPOPAGO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPOPAGO]"
+                      name="TIPOPAGO" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPOCUENTA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPOCUENTA]"
+                      name="TIPOCUENTA" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[NUMEROCUENTA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[NUMEROCUENTA]"
+                      name="NUMEROCUENTA" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[CONCEPTO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="48"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[CONCEPTO]"
+                      name="CONCEPTO" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPOIDENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[TIPOIDENT]"
+                      name="TIPOIDENT" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[IDENTIFICACION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[IDENTIFICACION]"
+                      name="IDENTIFICACION" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[NOMBRE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="64"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[NOMBRE]"
+                      name="NOMBRE" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[IdBanco]"
+                      dataType="i4"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[IdBanco]"
+                      name="IdBanco" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Generar Archivo Cash\Destino de archivo plano"
+              componentClassID="DTSAdapter.FlatFileDestination.3"
+              contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de archivo plano"
+              localeId="12298"
+              name="Destino de archivo plano">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si los datos sobrescriben el archivo de destino o se anexan al mismo."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el texto para escribir en el archivo de destino antes de escribir ningún dato."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Cuando el calificador de texto está habilitado, especifica si este contendrá secuencias de escape o no en los datos escritos en el archivo de destino."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Generar Archivo Cash\Destino de archivo plano.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Archivo CASH 13]"
+                  connectionManagerRefId="Package.ConnectionManagers[Archivo CASH 13]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+                  hasSideEffects="true"
+                  name="Entrada de destino de archivo plano">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[SECUENCIAL]"
+                      cachedDataType="i4"
+                      cachedName="SECUENCIAL"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Secuencial]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[SECUENCIAL]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[MONEDA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="MONEDA"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Moneda]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[MONEDA]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[VALOR]"
+                      cachedDataType="numeric"
+                      cachedName="VALOR"
+                      cachedPrecision="14"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Valor]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[VALOR]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[TIPOCUENTA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="TIPOCUENTA"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[TipoCuenta]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOCUENTA]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[CONCEPTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="64"
+                      cachedName="CONCEPTO"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Concepto]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[CONCEPTO]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[TIPOIDENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="TIPOIDENT"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[TipoIdent]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOIDENT]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[IDENTIFICACION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="IDENTIFICACION"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Identificacion]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[NOMBRE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="128"
+                      cachedName="NOMBRE"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nombre]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[NOMBRE]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[NUMEROCUENTA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="NUMEROCUENTA"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[NumeroCuenta]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[NUMEROCUENTA]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[TIPOPAGO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="TIPOPAGO"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[TipoPago]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOPAGO]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[TIPOTRX]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="TIPOTRX"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[TipoTrx]"
+                      lineageId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB].Columns[TIPOTRX]" />
+                    <inputColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[Codigo_Banco]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="Codigo_Banco"
+                      externalMetadataColumnId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[CodigoBanco]"
+                      lineageId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[Codigo_Banco]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Secuencial]"
+                      dataType="i8"
+                      name="Secuencial" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Moneda]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="Moneda" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Valor]"
+                      dataType="numeric"
+                      name="Valor"
+                      precision="14" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[TipoPago]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="TipoPago" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[TipoCuenta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="TipoCuenta" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[NumeroCuenta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="NumeroCuenta" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Concepto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="64"
+                      name="Concepto" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[TipoIdent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="TipoIdent" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Identificacion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="Identificacion" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Nombre]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Nombre" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[CodigoBanco]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="CodigoBanco" />
+                    <externalMetadataColumn
+                      refId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[TipoTrx]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="TipoTrx" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Generar Archivo Cash.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\Generar Archivo Cash\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Generar Archivo Cash\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Generar Archivo Cash.Paths[Salida de origen de OLE DB]"
+              endId="Package\Generar Archivo Cash\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Obtener Datos Archivo"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{89f05340-5654-4d50-961e-e44103b257e9}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Obtener Datos Archivo"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1477EBB6-3190-42EB-B78E-A33A96B9AA3B}"
+          SQLTask:SqlStatementSource="declare &#xA;@l_archivo varchar(64),&#xA;@l_servidor varchar(64),&#xA;@l_ruta varchar(256)&#xA;&#xA;select @l_servidor = valor &#xA;from DETALLE_PARAMETRO &#xA;where ID_PARAMETRO = (select ID_PARAMETRO from PARAMETRO where CODIGOPARAMETRO = 'SRVARC') and CODIGODET = 'SERVIDOR'&#xA;&#xA;select @l_ruta = valor &#xA;from DETALLE_PARAMETRO &#xA;where ID_PARAMETRO = (select ID_PARAMETRO from PARAMETRO where CODIGOPARAMETRO = 'SRVARC') and CODIGODET = 'RUTA'&#xA;&#xA;select @l_archivo = valor &#xA;from DETALLE_PARAMETRO &#xA;where ID_PARAMETRO = (select ID_PARAMETRO from PARAMETRO where CODIGOPARAMETRO = 'ARCHS') and CODIGODET = 'DECTER'&#xA;&#xA;SELECT @l_archivo AS Archivo,&#xA;@l_servidor AS Servidor,&#xA;@l_ruta AS Ruta"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="Servidor"
+            SQLTask:DtsVariableName="User::Servidor" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="Ruta"
+            SQLTask:DtsVariableName="User::Ruta" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="Archivo"
+            SQLTask:DtsVariableName="User::Archivo" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Obtener periodo"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Obtener periodo Nomina"
+      DTS:DTSID="{ce6d2dcd-62c4-4287-bf4f-6c1ab738405c}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Obtener periodo"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1477EBB6-3190-42EB-B78E-A33A96B9AA3B}"
+          SQLTask:SqlStatementSource="declare @l_fecha date,&#xA;&#x9;@l_fechaPeriodo date,&#xA;&#x9;@l_anio  varchar(4),&#xA;&#x9;@l_mes   varchar(2),&#xA;&#x9;@l_fechaDecimo  date,&#xA;&#x9;@l_flag  bit&#xA;&#xA;set @l_flag = 0&#xA;select @l_fecha = getdate(), &#xA;@l_fechaPeriodo = convert(date, valor),&#xA;@l_anio = year(convert(date, valor)), &#xA;@l_mes =  right('00' +  convert(varchar, month(convert(date, valor))), 2) &#xA;from Parametro&#xA;where CodigoParametro = 'PERNOMINA'&#xA;&#xA;select @l_fechaDecimo = dateadd(yy, -1, convert(date, Valor))&#xA;from Parametro&#xA;where CodigoParametro = 'PERIODO13'&#xA;&#xA;if (@l_fechaDecimo &lt; @l_fechaPeriodo and DATEDIFF(dd, @l_fechaDecimo, @l_fechaPeriodo) between 0 and 32)&#xA;&#x9;set @l_flag = 1&#xA;&#xA;select Fecha = @l_fecha,&#xA;FechaPeriodo = @l_fechaPeriodo,&#xA;Anio = @l_Anio,&#xA;Mes = @l_mes,&#xA;FechaDecimo = @l_fechaDecimo,&#xA;Flag = @l_flag&#xA;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="Anio"
+            SQLTask:DtsVariableName="User::Anio" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="Mes"
+            SQLTask:DtsVariableName="User::Mes" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="Fecha"
+            SQLTask:DtsVariableName="User::Fecha" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="FechaPeriodo"
+            SQLTask:DtsVariableName="User::FechaPeriodo" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="FechaDecimo"
+            SQLTask:DtsVariableName="User::FechaDecimo" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="Flag"
+            SQLTask:DtsVariableName="User::FlagEjecucion" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{644824E7-02AC-4E9B-8484-EE5C554733E9}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::FlagEjecucion] = True"
+      DTS:From="Package\Obtener periodo"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Obtener Datos Archivo" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{0154AD65-CD22-4C71-AB1F-799751D21DDC}"
+      DTS:From="Package\Obtener Datos Archivo"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\Archivo cash de salida" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{D11B6CB1-D209-49A0-B520-8B802B7EC9FF}"
+      DTS:From="Package\Archivo cash de salida"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:To="Package\Generar Archivo Cash" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{2C785F3E-73EA-4D45-8BBE-C57CA7C2BE8B}"
+      DTS:From="Package\Generar Archivo Cash"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 3"
+      DTS:To="Package\Actualizar Marca Cash" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="sql11">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Actualizar Marca Cash"
+          TopLeft="343,327" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Archivo cash de salida"
+          TopLeft="334,141" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Generar Archivo Cash"
+          TopLeft="342,225" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Obtener Datos Archivo"
+          TopLeft="47,145" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Obtener periodo"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="138.75,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,9.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="232,164">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102,0"
+              Start="0,0"
+              End="94.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="94.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="429,183">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 3]"
+          TopLeft="433.25,267">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Generar Archivo Cash">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS"
+          TopLeft="128,25" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Generar Archivo Cash\Búsqueda"
+          TopLeft="156,117" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Generar Archivo Cash\Destino de archivo plano"
+          TopLeft="124,202" />
+        <EdgeLayout
+          Id="Package\Generar Archivo Cash.Paths[Salida de origen de OLE DB]"
+          TopLeft="221.5,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Generar Archivo Cash.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="220,159">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,11.65234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Generar Archivo Cash\Datos PAGOS_DECIMOS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Generar Archivo Cash\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
